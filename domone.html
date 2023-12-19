@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Chai or Code</title>
+</head>
+<body style="background-color: #212121; color: #fff">
+    <div class="parent">
+        <div class="days">Monday</div>
+        <div class="days">Tuesday</div>
+        <div class="days">Wednesday</div>
+        <div class="days">Thursday</div>
+    </div>
+</body>
+<script>
+    const parent = document.querySelector('.parent');
+    // console.log(parent); // NodeList [div.days.monday, div.days.tuesday, div.days.wednesday, div.days.thursday]
+    <!-- console.log(parent.children[1].innerHTML) -->
+    for (let index = 0; index < parent.children.length; index++) {
+        const element = parent.children[index].innerHTML;
+        console.log(element)
+    }
+</script>
+</html>
