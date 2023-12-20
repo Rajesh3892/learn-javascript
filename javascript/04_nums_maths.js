@@ -36,5 +36,5 @@ console.log(Math.floor(Math.random() * 10) + 1)
 // Get random value from 10 to 20
 const min = 10;
 const max = 20;
-let randomValue = Math.floor(Math.random() * (max - min)) + min;
+let randomValue = Math.floor(Math.random() * (max - min + 1)) + min;
 console.log(`Random Value is ${randomValue}`);

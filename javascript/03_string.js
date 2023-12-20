@@ -1,4 +1,4 @@
-// const firstName = 'Rajesh' // Old Fashion
+// const firstName = 'Rajesh'
 // console.log(firstName.length)
 
 // const age = 30;
@@ -23,5 +23,4 @@ console.log(name.length);
 console.log(name.toUpperCase());
 
 console.log(name.substring(0, 4)); //Slice the string. this cannot in reverse order
-console.log(name.slice(-4, 6)); //Slice the string but it can be reverse order
-
+console.log(name.slice(-4, 6)); //Slice the string but it can be in reverse order

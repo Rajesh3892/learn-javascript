@@ -1,13 +1,14 @@
-// Stack (Primitive) memory acocation
-// Primitive Datatype: String, Number, Boolean, null, undefined, symbol, bigInt
+// Stack (Primitive) memory alocation
+// Primitive Datatype (Copy of variable value): String, Number, Boolean, null, undefined, symbol, bigInt
 let myYouTubeName = 'CodeWithRajesh';
 let anotherName = myYouTubeName
 anotherName = 'IntertainmentWithRaj'
 
-console.table(myYouTubeName, anotherName);
+console.log(myYouTubeName);
+console.log(anotherName);
 
-// Heap (Non-Primitive) memory acocation
-// Non-Primitive Datatypes: Object, Array, Function
+// Heap (Non-Primitive) memory alocation
+// Non-Primitive Datatypes (Reference of variable value): Object, Array, Function
 
 let userOne = {
     name : "Raj",
@@ -23,6 +24,6 @@ let userOne = {
 
 let userTwo = userOne
 
-userTwo.name = "Prahalad"
+userTwo.name = "Songara"
 console.log(userOne);
 console.log(userTwo);
