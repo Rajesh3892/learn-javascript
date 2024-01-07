@@ -1,0 +1,90 @@
+
+body{margin:10px;padding: 10px;}
+.container{max-width:1280px;margin:auto; display: grid;}
+h1,h2{
+    font-family:"Arial Black",Gadugi,"Times New Roman","Times New Roman";color:#333;line-height:.5em}
+.project-link{
+    background-color: #333;
+    border-bottom:solid #810202;
+    padding:10px;
+    width: 200px;
+    display: inline-block; 
+    text-align: center;
+    color: #fff;
+    margin-top: 5px;
+}
+.projects {
+    display: grid;
+}
+.navBarText{
+    color:'grey';
+    text-decoration:none;
+    transition:all .2s;
+    cursor:pointer
+}
+a{
+    text-decoration:none;
+    transition:all .2s;
+    cursor:pointer
+}
+.a:hover{
+    color:#9b0b0b;
+    background-color: solid #810202;
+}
+#eventOnImage{
+    width: 150px;
+    height: 100px;
+    border-radius: 8px;
+    float: left;
+    margin: 10px;
+}
+.wrapper {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fill, [col] auto ) ;
+    grid-template-rows: repeat(auto-fill, [row] auto  );
+    background-color: #fff;
+    color: #444;
+}
+
+.box {
+    background-color: #444;
+    color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 100%;
+    /* height: fit-content;
+    width: fit-content; */
+
+}
+.firstBox {
+    grid-column: col / span 2;
+    grid-row: row ;
+}
+.secondBox {
+    grid-column: col 3 / span 2 ;
+    grid-row: row ;
+}
+.c {
+    grid-column: col ;
+    grid-row: row 2 ;
+}
+.d {
+    grid-column: col 2 / span  3 ;
+    grid-row: row 2 ;
+}
+
+.e {
+    grid-column: col / span 4;
+    grid-row: row 3;
+}
+.asyncBox {
+	background-color: aliceblue;
+	border: solid 1px;
+	border-radius: 6px;
+	margin-top: 10px;
+	width: fit-content;
+	padding: 15px;
+    display: inline-block;
+}
+

@@ -1,4 +1,4 @@
-// Falsy Value: false, null, undefined, NaN, 0, -0, "", NIgInt 0n
+// Falsy Value: false, null, undefined, NaN, 0, -0, "", BigInt 0n
 
 // Truthy Value: True, "0", 'false', " ", [], {}, function(){}, 
 
@@ -15,7 +15,7 @@ if (Object.keys(userObj).length === 0) {
 // Nullish Coalescing Operator (??): null undefined
 let name1 = null ?? "Anonymous"; // Anonymous
 let age1 = undefined ?? 25; // 25
-let age2 = 5 ?? 10
+let age2 = 5 ?? 10 // 5
 let age3 = null ?? 10 ?? 20 //20
 
 

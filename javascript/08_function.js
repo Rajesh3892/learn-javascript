@@ -6,7 +6,7 @@ function calculateCartPrice(...num){
 
 
 //=============== Function Hoisting =========================
-// console.log(addNumbers()); // Output: Gives ERROR
+
 var addNumbers = function(){
     let sum = 0;
     let arguments = [1,2,3,4,5]
@@ -15,6 +15,7 @@ var addNumbers = function(){
     }
     return sum;
 };
+// console.log(addNumbers()); // Output: 15
 
 //============= Arrow functions and this keyword ===============
 const person = {
@@ -42,24 +43,27 @@ const explicitReturnFunction = () => {
 
 //Emplicit method: in this method curly brackets does not use
 // Method-1: Without () paranthesis
-// const implicitReturnFunction = (num1 , num2) => num1 + num2
+const implicitReturnFunction1 = (num1 , num2) => num1 + num2
+// console.log(implicitReturnFunction1(5, 6));
 
 // Method-2: With () paranthesis
-// const implicitReturnFunction = (num1, num2) => (num1 + num2)
+const implicitReturnFunction2 = (num1, num2) => (num1 + num2)
+// console.log(implicitReturnFunction2(5, 6));
 
 //Method-3: if return object using emplisit  
-const implicitReturnFunction = (num1, num2) => ({result: num1 + num2});
-// console.log(implicitReturnFunction(5, 6));
+const implicitReturnFunction3 = (num1, num2) => ({result: num1 + num2});
+// console.log(implicitReturnFunction3(5, 6));
 
 
 //============ Immediately Invoked Function Expression (IIFE) ===================
 // Note: That function which immediately invoke and remove problem/polution of functions or variables of global scope. IIFE has access the global variables but cannot change. 
 (function iifeFunction(){
-    console.log('This is unnamed IIFE');
+    console.log('This is named IIFE');
 })();
 
+// Note: ";" (semicolon) is mendatory if write another code below the IIFE function, otherwise it returns error
 ((name) =>{
-    console.log(`Hello ${name}, This is named IIFE`);
+    console.log(`Hello ${name}, This is unnamed IIFE`);
 })('Rajesh')
 
 

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React with OPPs</title>
+</head>
+<body>
+    <button type="button">Clicked Button</button>
+</body>
+<script>
+    class React {
+        constructor() {
+            // this._listeners = [];
+            this.library = 'React';
+            this.server = 'http://localhost:3000'
+            //Requirement
+            const button = document.querySelector('button');
+            button.addEventListener("click",this.handleClick.bind(this));
+            //button.addEventListener("click", () => this.handleButtonClick());
+        }
+        /*handleButtonClick(){
+            fetch(`${this.server}/api/counter`,{method:'GET'})
+            .then(response=> response.json())
+            .then((data)=>{
+                alert(`You clicked the button ${data.count} times`);
+            })
+            .catch((error) => {
+                console.log(`Error: ${error}`);
+            })
+        }*/
+        handleClick(){
+            console.log('Button Clicked!')
+            console.log(this)
+        }
+    }
+    let reactApp = new React();
+    //window.reactApp = reactApp;
+</script>
+</html>

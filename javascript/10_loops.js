@@ -1,4 +1,4 @@
-// ==================== for of loop =========================
+// ==================== (for of) loop =========================
 // 1) For Array 
 let arr = [1,2,3,4,5]
 for (const val of arr) {
@@ -8,12 +8,15 @@ for (const val of arr) {
 // 2) For String
 let str = "Hello World"
 for (const char of str) {
+    if (char == " ") {
+        continue;
+    }
     // console.log(char); // it return values: "H", "e", "l"
 }
 
 // 3) For Map Object
 let map = new Map();
-// map.set('a', 1).set('b', 2).set('c', 3); // use set 1-type 
+// map.set('aa', 1).set('bb', 2).set('cc', 3); // use set 1-type 
 // use set 2-type
 map.set('a', 1)
 map.set('b', 2)
@@ -33,7 +36,7 @@ let obj = {name: 'John', age: 30};
 // ==================== for in loop =========================
 
 // 1) For Object
-let userObj = {name: 'John', age: 30};
+let userObj = {name: 'John', age: 30, city: "Pali"};
 for (const key in userObj) {
     // console.log(`Key: ${key}, Value: ${userObj[key]}`); // Object is not iterable
 }
@@ -59,7 +62,7 @@ fruit.forEach((item, index, iterate) => {
     // console.log(iterate);
 });
 // 2) For Set Object
-const mySet = new Set(['red','blue','green']);
+const mySet = new Set(['red','blue','green', 'orange']);
 mySet.forEach((val)=>{
     // console.log(`Value: ${val}`);
 })
@@ -112,9 +115,9 @@ const filteredFruits = fruits.filter((fruit) => fruit === 'Apple');
 // console.log(filteredFruits); // Output: Apple
 
 // 2) Filter Array Elements using Regular Expression
-const animals = ["Dog", "Cat", "Elephant", "Lion", "Tiger"];
+const animals = ["Dog", "Cat", "Elephant", "Lion", "Tiger", "Andrew"];
 const animalNamesStartingWithAorAn = animals.filter((name) => /^[aA]/.test(name));
-// console.log(animalNamesStartingWithAorAn); // Output: Cat, Elephant, Lion, Tiger
+// console.log(animalNamesStartingWithAorAn); // Output: ['Andrew]
 
 // 3) Filter Array Elements using scope function
 const numArray = [1,2,3,4,5,6,7,8,9,10]
@@ -130,11 +133,11 @@ const arrNum = [1, 2, 3, 4, 5];
 const resultArr = arrNum.map((element) => element * 2);
 // console.log(resultArr); // Output: [2, 4, 6, 8, 10]
 
-// 2) Create a string from all the words in an array and capitalize it
-const strWords = ['hello', 'world'];
+// 2) Create a string from all the words in an array and capitalize in sentance case.
+const strWords = ['hello', 'Rajesh', 'welcome', 'to', 'the', 'world'];
 const sentence = strWords.join(' ') + '.';
 let capSentence = sentence.charAt(0).toUpperCase() + sentence.slice(1);
-// console.log(capSentence); // Output: Hello world.
+// console.log(capSentence); // Output: Hello Rajesh welcome to the world.
 
 // 3) Use map with object and arrow function
 const personList = [{ name: "John" }, { name: "Jane" }, { name: "Tom" }];
@@ -144,7 +147,7 @@ const fullNameList = personList.map((person) => ({ ...person, fullName: `${perso
 // 4) Map chaining function
 const myNumbers = [1,2,3,4,5,6,7,8,9,10]
 const newNums = myNumbers.map((num) => num * 10).map((num) => num + 1).filter((num) => num > 40)
-// console.log(newNums);
+console.log(newNums);
 
 // =============== reduce function ====================
 // 1) Reduce sum of array elements
@@ -183,4 +186,4 @@ function flattenDeep(arr){
 }
 const deepArr = [[1], [2, [3]], 4, [5]];
 const resultFlattened = flattenDeep(deepArr);
-console.log(resultFlattened);
+// console.log(resultFlattened);

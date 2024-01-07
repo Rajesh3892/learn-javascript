@@ -7,4 +7,4 @@ let newDateFormat = newDate.toLocaleString('default',{
     weekday: 'long'
 })
 
-console.log(newDateFormat)
+// console.log(newDateFormat)

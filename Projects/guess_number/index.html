@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess a Number</title>
+</head>
+<body>
+  <div class="container">
+    <nav class="bar">
+        <a href="/">Home</a>
+        <a href="/">Play Game!</a>
+    </nav>
+    <form>
+      <span>Enter your guess:</span><br><br>
+      <input type="text" id="guessInput"><br><br>
+      <input type="button" id="submit" value="Guess Number">
+    </form>
+    <div class="gameResult">
+      <p>Previuos Number: <span class="previuosGuess"></span></p>
+      <p>Remaining Chance: <span class="remaining">10</span></p>
+      <p><span class="lowOrHigh"></span></p>
+    </div>
+  </div>
+</body>
+<script type="text/javascript" src="guess_number.js"></script>
+</html>

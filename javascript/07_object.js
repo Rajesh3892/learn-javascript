@@ -56,7 +56,7 @@ student.greetings = function(){
     // console.log("Hello how are you?");
 }
 
-// console.log(student.greetings); // Type1: this will function return back not function execute
+// console.log(student.greetings); // Type1: this function returns back not function execute
 // console.log(student.greetings()); // Type2: function executed, Output: 'Hello how are you?'
 
 // When we reference of same object to access/get specific value
@@ -100,23 +100,23 @@ let DeepObj = JSON.parse(JSON.stringify({x:{y:{z:1}}}));
 //===================Rest Parameter========================
 function myFunction(...args) {
     // console.log(args); // Output: ['first', 'second']
-    // console.log(args[0]); // Output: Hello World!
+    // console.log(args[0]); // Output: first
 }
 myFunction('first', 'second');
 
 //===================Default Parameters========================
 function greet({name="World"}){
-    console.log(`Hello, ${name}`);
+    // console.log(`Hello, ${name}`);
 }
-// greet({}); // Hello, World
-// greet({name:'John'}); // Hello, John
+greet({}); // Hello, World
+greet({name:'John'}); // Hello, John
 
 //=================== Object Destructuring Assignment ========================
 // Method-1
 let objNumber = {"one":1,"two":2,"three":3};
 let {one, two:c} = objNumber;
-// console.log(one); // one
-// console.log(c); // three
+// console.log(one); // 1
+// console.log(c); // 2
 // Method-2
 let o = {p: 42, q: true};
 ({p: o.x, q: o.z} = o);
@@ -137,19 +137,20 @@ let user = {
 // console.log(user.address?.country); // Option Chaining
 
 
-
+const re = user.hasOwnProperty('address')
+// console.log(re);
 
 // ====================== Other example ===================
 const userDetail = {
     userId : "123abc",
-    fullName : () => `${this.userId}-${this.email}`,
     email : "john@doe.com",
     city : 'Pali',
+    fullName : () => `${this.userId}-${this.email}`, // this keyword not working in arrow function
     getUserDetails(){
         return this.fullName();
     }
 }
-//console.log(userDetail.getUserDetails()); // undefined-undefined  john-john@doe.com
+console.log(userDetail.getUserDetails()); // undefined-undefined  john-john@doe.com
 
 
 //=================== Promise =====================
@@ -159,5 +160,5 @@ let promiseExample = () => {
     });
     return promiseOne;
 }
-// promiseExample().then(result=> console.log(result));
+promiseExample().then(result=> console.log(result));
 

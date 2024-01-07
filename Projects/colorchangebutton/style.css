@@ -1,0 +1,32 @@
+body {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    height: 100vh;
+}
+.canvas{
+    position:relative;
+    display: block;
+    margin-left: 0px;
+}
+.button{
+    padding: 5px;
+    width: 70px;
+    border-radius: 0%;
+    border: none;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+#gray{
+    background-color: rgb(94, 92, 92)
+}
+#red{
+    background-color: rgb(173, 6, 6)
+}
+#green{
+    background-color: rgb(15, 155, 10)
+}
+#orange{
+    background-color: rgb(209, 93, 15)
+}
